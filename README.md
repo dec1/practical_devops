@@ -1,2 +1,1 @@
-# practical_kubernetes
-Practical Kubernets, Docker, Linux 
+# Practical Kubernets, Docker, Linux 
