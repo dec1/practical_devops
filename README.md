@@ -17,13 +17,14 @@ It may help you too.
 - [Kubernetes](./devops/kubernetes/ref/)
 - [Linux](./linux/)
 - [Docker](./devops/docker)
+- [Vim](./editor/vim/vim.md)
 ###
 
 
 
 ----
 
-*Note*: Here as elsewhere *docker* is often inaccurately used as umbrella term in the context of container/image technology. 
+*Note*: Here as elsewhere *docker* is often inaccurately used as an umbrella term in the context of container/image technology. 
      See [tech](./devops/docker/tech.md) for a more accurate overview.
 
 ----
