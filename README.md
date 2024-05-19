@@ -3,8 +3,8 @@
 Essential concepts and commands for devops.
 - useful in practice and preparation for certification like [CKAD](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/).
 
-There is a lot of stuff to remember when working with devops
-    - kubernetes stuff, containers stuff, linux stuff. 
+There is a lot of stuff to remember in devops
+    - kubernetes stuff, container stuff, linux stuff. 
 
 
 I compiled the material here to help me keep track of what seemed the most important stuff, at least in the context I use it. As a
