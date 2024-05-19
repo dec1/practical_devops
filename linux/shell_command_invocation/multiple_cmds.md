@@ -5,6 +5,7 @@ Multiple commands on same line
     - `cmd1` **`&&`** `cmd2`
      **conditional**: cmd2 after cmd1 _only if_ cmd1 succeeded (exit status 0).
     <br>
+    
     - `cmd1` **`;`** `cmd2`
     **unconditional**: cmd2 after cmd1 (even if cmd1 failed)
 

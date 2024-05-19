@@ -2,7 +2,7 @@
 ## Shell Expansion
 eg Argument Expansion and Substitution
 
-#### \$, ${}  - Variable Expansion 
+#### \$ , ${}  - Variable Expansion 
 
 ```
 var=10
