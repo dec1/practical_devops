@@ -1,4 +1,4 @@
-# Practical Kubernetes, Docker, Linux 
+# Practical DevOps - Kubernetes, Docker, Linux 
 
 Essential concepts and commands for devops.
 - useful in practice and preparation for certification like [CKAD](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/).
