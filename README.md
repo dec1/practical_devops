@@ -3,13 +3,19 @@
 Essential concepts and commands for devops.
 - useful in practice and preparation for certification like [CKAD](https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/).
 
-There is a lot of stuff to remember when working with kubernetes, containers (docker, podman etc) and the linux command line in a devops context.
+There is a lot of stuff to remember when working with devops
+    - kubernetes stuff, containers (docker, podman etc) stuff and linux command line stuff. 
 
- I compiled the material in this repo to help me revise and as a reference. It may help you too. 
+
+I compiled the material in this repo to help me revise all this stuff and as a reference. It may help you too. 
 
 
 - [Kubernetes](./devops/kubernetes/ref/)
 - [Linux](./linux/)
 - [Docker](./devops/docker)
+     - ***Note***: Here as elsewhere *docker* is often inaccurately used as umbrella term in the context of container/image technology. 
+     See [tech](./devops/docker/tech.md) for a more accurate overview.
+----
+ [Additional resources](links.md)
 
 
