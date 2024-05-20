@@ -9,8 +9,7 @@
     - `k get ...` **`-o wide`** 
         more detail 
     - `k get ...` **`-o yaml`** (also `-o json`)
-        much more detail (~  [edit](../modify/edi
-        t.md))
+        much more detail (~  [edit](../modify/edit.md))
     #####
     - `k get` **`-w`**
         **watch**: dont return but keep output updated (like linux `watch` command)
