@@ -11,7 +11,7 @@
     - `k help service clusterip`
     - `k help service clusterip`
 
-    (for help on resource see [describe/explain](./query/describe_explain.md))
+    (for help on resource see [describe](./query/describe.md), [explain](./query/explain.md))
 #####
 ----------
 ### Version
