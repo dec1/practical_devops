@@ -1,5 +1,5 @@
 ## Authentication
-- All clients (including kubectl and pods or applications running therein) need to [authenticate](../../../../../network/authentication.md) themselves to api server before they can further access it. This can be done in one of 2 ways:
+- All clients (including kubectl and pods or applications running therein) need to [authenticate](../../../../../../network/web/security/authentication.md) themselves to api server before they can further access it. This can be done in one of 2 ways:
 
 
     ####

@@ -94,7 +94,7 @@
     </details>
 ----
 
-- Regardless of which parameters above you pass to kubectl to create the secret, the values are all stored  (base64) *automatically* **encoded** similarly in [data](../common.md) section.    
+- Regardless of which parameters above you pass to kubectl to create the secret, the values are all stored  (base64) *automatically* **encoded** similarly in [data](../cm_secrets.md) section.    
 - `k` **`get`** `secret` `my-sec` `-o yaml`v
        
     ```yaml

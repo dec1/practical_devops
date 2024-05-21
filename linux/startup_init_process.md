@@ -18,7 +18,7 @@ In kernel space and before user space starts, cpu runs instructions, but they ar
     - **container**
         the first process in a container is also init process with pid=1, but it has **no** such special **responsibilities**, and is often 'just' a shell. 
         container init is defined by `ENTRYPOINT/CMD` of dockerfile, or parameters passed to `docker run`. 
-        See also [init_process](../devops/docker/dockerfile/init_process.md)
+        See also [container init](../devops/docker/main/container/init/init.md)
 
 
 - **systemd** - (most modern) and sysVinit are common implementations of init. 

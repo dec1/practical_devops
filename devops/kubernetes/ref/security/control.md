@@ -5,8 +5,8 @@ Request gets drops at fist stage it fails.
 
 - ### 1). [Access Control](./control_access/control_access.md) 
     - **Subject *dependent***
-        - [Authentication](../security/authentication/authentication.md)
-        - [Authorization](../security/authorization/authorization.md)
+        - [Authentication](../security/control_access/authentication/authentication.md)
+        - [Authorization](../security/control_access/authorization/authorization.md)
 
 
 

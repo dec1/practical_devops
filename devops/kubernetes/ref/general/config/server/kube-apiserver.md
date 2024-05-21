@@ -4,7 +4,7 @@
 
     #####
     - configuration for the Kubernetes API server
-        - eg enabled/disabled [Admission Controller Plugins](../../../security/api_request_stages.md):
+        - eg enabled/disabled [Admission Controller Plugins](../../../security/control.md):
 
             ```yaml
             ....

@@ -26,7 +26,7 @@ Creates one or more Pods and will continue to restart (can only happend due to c
 <br>
 
 - **Success** 
-    - `spec.completions` pods have succeeded (all containers exit `code 0`  see [Pod](pod.md))
+    - `spec.completions` pods have succeeded (all containers exit `code 0`  see [Pod](../pod/pod.md))
 
 - **Failure**
     - `backoffLimit` -  total Pod failure count exceeds
