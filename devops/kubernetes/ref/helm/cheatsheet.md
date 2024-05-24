@@ -45,7 +45,7 @@
 
 ###    
 - `helm` **`install`** `my-nginx` `my-bitnami/nginx` `[--set my-key=my-val]`
-    - `--set` [values](commands.md#show_values_anchor) in chart
+    - `--set` [values](./commands.md#show_values_anchor) in chart
     ```yaml
     NAME: my-nginx
     LAST DEPLOYED: Tue Mar 19 08:27:34 2024

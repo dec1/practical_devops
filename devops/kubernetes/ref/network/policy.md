@@ -1,14 +1,14 @@
 
-### Network Policy
-Restricts pod communication based on *pod* and/or *namespace* **labels** 
-Precisely it restricts the **`direction`** of `connection establishment` (once established the traffic can flow freely in either direction) - [online editor](https://editor.networkpolicy.io/)
+### Network Policy8the 
+Restricts communication between pods in a single **namespace**, based on their **labels**.
+More, precisely it restricts the **`direction`** of `connection establishment` (once established the traffic can flow freely in either direction) - [online editor](https://editor.networkpolicy.io/)
 
 For all **Pods** (which must reside in `same namespace as policy`) **targeted** ie those matched by 
-- **podSelector**,
+- **podSelector**
 
  deny connection requests (if **Ingress/Egress** PolicyType defined) 
  not specifically allowed by subsequent exceptions in
-    - `fom`  **ingress** (or on same node)
+    - `from`  **ingress** (or on same node)
     - `to` **egress**
 
 ---- 
