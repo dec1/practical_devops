@@ -36,13 +36,17 @@
     ###
     The difference between 1 and 2 lies only in how server knows identity of (constant) client
 
-- 1 
-    - symmetric - server also gets copy of client cert (kubectl passes it)
+    - 1). 
+        - symmetric - server also gets copy of client cert (kubectl passes it)
 
-- 2 
-    - from token created independently of TLS session. passed by client (pod) in http `Authorization` header of `every call`
-        #####
-        - `Authorization: Bearer <service-account-token>`
+    - 2). 
+         - from token created independently of TLS session. passed by client (pod) in http `Authorization` header of `every call` :
+            #####
+            ```http
+            ...
+            Authorization: Bearer <service-account-token>
+            ...
+            ```
 
 
 
