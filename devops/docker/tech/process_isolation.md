@@ -5,7 +5,7 @@
 - The sets may coincide, which is  whats done to create the "illusion" of containers
 
 
-- Neither share cgroups
+
 
     - #### 1). Namespaces:
         -  **whats visible** for a process 
