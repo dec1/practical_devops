@@ -12,7 +12,7 @@
 
 ####
 
-- network **[namespace](..//devops/docker/tech_under.md)** 
+- network **[namespace](..//devops/docker/tech/tech.md)** 
     - on single host
     -  1 software network stack, and 1+ interfaces. 
     - each interfaces can be in only 1 namespace.
