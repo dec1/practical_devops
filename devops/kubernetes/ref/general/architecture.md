@@ -8,23 +8,29 @@ Manages containerized applications at scale
 ~ logical App + Infrastructure
          
 - **Control** plane (1 - ~3 nodes)
- 
+     #####
     - **Api Server**        
         - exposes the Kubernetes (Rest) API 
         -  IP address configured in `controlPlaneEndpoint` of file `kubeadm-init.yaml`
         - the only way to interact with kubernetes control plane from outside cluster
 
+    #####
     - **Controller Manager**
         - watches the state of cluster  and decides
         - **what** pods need to be created (so actual state matches desired state, eg num of replicas) 
         - delegates to Scheduler to create them
 
+    #####
     - **Scheduler**
         - **where** (which node) to put new pods that controller manager requires.
                 
-
+    #####
     - **Etcd**
-        - key-value storage, for persistence of all cluster related data
+        - key-value data **persistance**.
+        - used by kubernetes itself (which doesnt write to files) for persistance (cluster state, pod definitions, service configurations, secrets, etc.) 
+        - not directly accessible by kubectl (admins)  or containerized applications for storing their data. 
+        - `etcd` can be used by admins to read/write directly (bypassing api server - not recommended) for troubleshooting or diaster recovery
+         
     #####
 
 - **Worker** nodes (1 - n nodes)
@@ -51,7 +57,7 @@ Manages containerized applications at scale
 
     - { **Replica** set }
             groups of identical pods 
-            managed by 'deployment'
+            managed by **deployment**
             (may be spread across multiple nodes)
 
         - {**pod**}
@@ -61,25 +67,11 @@ Manages containerized applications at scale
 _Note_: Typically all control nodes are identical, and all worker nodes are identical
 
 
-### Configuration
 
-decouple config from app itself, which can be injected into pod at runtime
+#### Namespaces
 
-- **ConfigMaps** 
-    non-sensitive data
+- Allow sharing of single cluster by [dividing](../general/config/namespace.md) it into multiple (logically separated) virtual clusters.
 
-- **Secrets**     
-    sensitive data (passwords)
-
-- 3rd party tools
-    very sensitive
-
-### Namespaces
-
-- Allow sharing of single cluster by dividing it into multiple (logically separated) virtual clusters.
-- Most kubernetes objects (eg pods services, deployments) are namespaced (and have "default" namespace if not explicitly set)
-- Suitable for sharing cluster among different depts of same company (eg dev, test, qa)
-- not suitable for isolating hostile workloads.
 
 
 

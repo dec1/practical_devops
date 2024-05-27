@@ -9,7 +9,7 @@
         - cert send send (api) server
     - **cluster**
         - ip address of (api) server
-    - **namespace** (name)
+    - **[namespace](./namespace.md)** (name)
         - required with every call to (api) server
 
 ###
@@ -38,8 +38,13 @@ Before they can be used in contexts
 
 Theres _always_ a **_current context_** in kubectl. 
 
-If you explicitly/individually specify namespace with a kubectl command this value is used. Otherwise the value from the *current context* is used.
-**default** is the namespace name used when you create a new context (set-context) without explicitly specifying a different name. Since no context has to have a namespace called "default", this also means - (contrary to popular belief) -  that its not true that kubernetes uses "default" as namespace if you dont specify one explicitly in a kubectl command.
+- If you explicitly/individually specify namespace with a kubectl command this value is used. Otherwise the value from the *current context* is used.
+
+####
+- Its not required that there be some context that has a namespace called "default", so - (contrary to popular belief) -  that its not true that kubernetes uses "default" as namespace if you dont specify one explicitly in a kubectl command.
+
+####
+- **default** is the namespace name used when you create a new context (set-context) without explicitly specifying a different name. 
 
 
 
