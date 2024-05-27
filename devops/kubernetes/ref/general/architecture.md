@@ -20,7 +20,7 @@ Manages containerized applications at scale
         - delegates to Scheduler to create them
 
     - **Scheduler**
-        - **where** (which node) to put new pods that controller requires.
+        - **where** (which node) to put new pods that controller manager requires.
                 
 
     - **Etcd**
