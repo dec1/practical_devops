@@ -8,7 +8,7 @@
 
 
     - #### 1). Namespaces:
-        -  **whats visible** for a process 
+        -  **whats visible** to a process 
             - Partitions various system resources (for processes)
                 - allowing sets of processes to operate with their own isolated view of the system
 
@@ -16,7 +16,7 @@
             -  5 linux system **[Namespace Types](./namespace_types.md)** 
 
             #####
-            - Stops one process in one set causing trouble for this in aother another by:
+            - Stops one process in one set causing trouble for those in another another by:
                 - using too much cpu, memory, storage, network
                 - corrupting memory or files of another process
                 - sending another process bad data or too many requests
@@ -45,6 +45,6 @@
             - CPU
             - Memory
         - Containers 
-            - never share cgroups (in docker or kubernetes)
+            - never share cgroups (neither docker nor kubernetes)
 
 
