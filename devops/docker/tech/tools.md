@@ -3,17 +3,17 @@
     Handles everything after image creation
 
     - **[Docker](https://www.docker.com/)** Engine 
-            uses containerd under the hood 
+        - uses containerd under the hood 
 
     - **[Podman](https://podman.io/)**
-            uses CRI-O under the hood  
+        - uses CRI-O under the hood  
 
     ####
     - **[_Containerd_](https://containerd.io/)**
-            simplicity, performance, secutity. default in kubernetes
+        - simplicity, performance, secutity. default in kubernetes
 
     - **[_CRI-O_](https://cri-o.io/)**         
-            used by OpenShift
+        - used by podman, openshift, 
 
 2)  Image Management (bulding etc)
     --------------
