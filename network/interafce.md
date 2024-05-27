@@ -12,7 +12,7 @@
 
 ####
 
-- network **namespace** 
+- network **[namespace](..//devops/docker/tech_under.md)** 
     - on single host
     -  1 software network stack, and 1+ interfaces. 
     - each interfaces can be in only 1 namespace.
@@ -55,7 +55,7 @@ end
 ---
  - **Docker-like Bridge**
 Combining veth pairs with bridge, you can effectively bridge between those namespaces. This is how docker connects host to shared container namespace. 
-    - Although each docker **container** is (by default) assigned its own **separate** network **namespace**, containers can communicate with each other and with the host over the bridge (using container names or IP addresses)
+    - Although each docker **container** is (by default) assigned its own **separate** network ***namespace***, containers can communicate with each other and with the host over the bridge (using container names or IP addresses)
 
 
 ```mermaid
@@ -96,19 +96,11 @@ end
 ```
 
 ---
-- Containers in single Kubernetes **pod**, in contrast, all **share** the **same** network namespace
+- **Pods**
+    - Containers in single Kubernetes **pod**, in contrast, all *share* the **same** network **namespace**
 
 
----
 
-
-#### linux namespaces:
-- ***net***   - network (interfaces, routing table, firewall)
-#####
-- **mnt**   - mount points
-- **uts**   - time sharing (hostname and network domain)
-- **ipc**   - interprocess communication (inc shared memory)
-- **pid**   - process identifiers (running processes)
 
 
 

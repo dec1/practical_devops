@@ -5,7 +5,7 @@
 - **Logical application**
     -  All **containers** (co-located and co-scheduled) have **same**:
         - **IP address** and port space as **pod** (individual containers within a pod can be distinguished/addressed via unique port number) - unlike in docker (default)() where container gets its own.
-        - **namespaces** 
+        - **namespaces** (and cgroups)
         - filesystem **volumes**
     - Smallest deployable units of Kubernetes computing
 
