@@ -36,7 +36,7 @@ Prerequisites:
             Without such checks the CA is redundant, and cert might as well be self-signed by private key holder.
 
         - Anything owner **signs** with their **private key** can be verified, using public key embedded in the cert, as being _associated_ with **name** etc in cert info.
-        - TSL, SSL, HTTPS protocols themselves all (can) use certificates for **establishing secure connections** (during handshake) - but they are generally not exchanged during subsequent requests 
+        - TLS/SSL, HTTPS protocols themselves all (can) use certificates for **establishing secure connections** (during handshake) - but they are generally not exchanged during subsequent requests 
 
         - Both password and bearer token based authentication, use **https**, which involve certs (or keys) of at least sever.
 
