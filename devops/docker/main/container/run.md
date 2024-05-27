@@ -1,7 +1,7 @@
 
 ### run
 
-- `d` **`run`** **`[--name my_ctr]`** `[-it]` `[-d]` `[-p 8080:80]`  `[`**`--entrypoint=<ep>]`** **`my_img`**`[:my_tag]` **`[cmd]`**
+- `d` **`run`** **`[--name my_ctr]`** `[-it]` `[-d]` `[-p 8080:80]`  **`[--entrypoint=<ep>]`** **`[--network=<type>]`**  **`my_img`**`[:my_tag]` **`[cmd]`**
 
     - `--name` - name of container (default: automatically generated)
     - `-i` - see output from container in (host) terminal
@@ -17,10 +17,22 @@
         - `/bin/sh `
         - `/bin/sh echo "hi there"`
         - `env`
+    #####
     - **`--entrypoint`** -  override ENTRYPOINT in dockerfile   
         - `--entrypoint='["/bin/echo", "hey.."]']`
 
-        examples: [forms and interaction](init/exec_shell_forms.md) 
+    ####
+    - **`--network`** -  [network type](../network.md) to (create and) run container in:
+        #####
+        - `bridge`	**default** network driver.
+        - `host`	Remove network isolation between the container and the Docker host.
+        - `none`	Completely isolate a container from the host and other containers.
+        #####
+        - `container:<name|id>`  attach a container to another container's networking stack -
+            - both containers then **share a single interface** (and ip address)
+
+        #####
+        - .... see  official [docs](https://docs.docker.com/network/#user-defined-networks) 
     
     ###
     (Note: `-i` is needed to see any output from cmd/entrypoint) 

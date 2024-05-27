@@ -1,4 +1,4 @@
-### Docker (*Bridge*) Network
+### Docker Networks
 
 - Docker containers can be networked together in different ways .
 You can specify which (bridge, host, none....) in 
@@ -6,20 +6,21 @@ You can specify which (bridge, host, none....) in
     - docker-compose file
 
 
-- #### Bridge  Network
+- #### Bridge  Network (default)
 
-    - Default docker network type
-    - Docker uses a **`Switch`**  to connect _multiple_ containers on a single host (even though it confusingly calls this a "**bridged**" network - which is technically a 2 port switch).
+    #####
+    - Each docker **container** gets  its own *separate* container **name** and **IP address** (in fact their own **network namespace** [see also](../../../network/interafce.md))
+        - unlike in kubernetes where each shares ip address of pod
+
+    #####
+    - Additionally docker creates a **`Switch`**  to which it connects the host and each  containers (even though it confusingly calls this a "**bridged**" network - which is technically a 2 port switch).
+        - containers
 
     #####
     - It operates at the **Layer 2**. (Data Link Layer) and forwards traffic based on MAC addresses, and allows containers to communicate with each other and with the host system, much like devices connected to a physical switch.
 
     #####
-    - By default, each docker **container** gets  its own *separate* container **name** and **IP address** (in fact their own **network namespace** [see also](../../../network/interafce.md))
-        - unlike in kubernetes where each shares ip address of pod
-
-    #####
-    - containers can communicate with each other (and with the host) over the _bridge_ (using container names or IP addresses)
+    - It also assigns ip addresses to the containers so they can communicate with each other (and with the host) over this _bridge_ (using container names or IP addresses)
 
 
 

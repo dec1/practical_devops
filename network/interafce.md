@@ -53,52 +53,15 @@ end
     Eth-host o--o Ex
 ```
 ---
- - **Docker-like Bridge**
-Combining veth pairs with bridge, you can effectively bridge between those namespaces. This is how docker connects host to shared container namespace. 
-    - Although each docker **container** is (by default) assigned its own **separate** network ***namespace***, containers can communicate with each other and with the host over the bridge (using container names or IP addresses)
+ - **Docker Networks**  
+    - Combining veth pairs with bridge, you can effectively bridge between those namespaces. This is how docker connects containers and host in its (default) [bridge network](../devops/docker/main/network.md). 
+    - Each **container** gets its own **separate** network **namespace**  (in fact their own network namespace (includig ip address)
 
 
-```mermaid
-
----
-&%%title: Docker-like Bridge
----
-flowchart LR
-    
-subgraph ns-host
-
-    b["Bridge"]
-
-    subgraph ns1_ctr1
-    eth-n1
-    end
-
-    subgraph ns2_ctr2
-    eth-n2
-    end
-
-    subgraph ns3_ctr3
-    eth-n3
-    end
-
-
-    
-    eth-n1 o--o |veth-1| b
-    eth-n2 o--o |veth-2| b 
-    eth-n3 o--o |veth-3| b 
-
-    Eth-host
-    b o-.-o Eth-host
-end    
-
-    Ex["External"]
-    Eth-host o--o Ex
-```
-
----
-- **Pods**
+- **Pods** 
     - Containers in single Kubernetes **pod**, in contrast, all *share* the **same** network **namespace**
 
+---
 
 
 
