@@ -12,14 +12,14 @@
 
 ####
 
-- network **[namespace](..//devops/docker/tech/tech.md)** 
+- network **[namespace](..//devops/docker/tech/process_isolation.md)** 
     - on single host
     -  1 software network stack, and 1+ interfaces. 
     - each interfaces can be in only 1 namespace.
     - **process** **runs** in a network *namespace* and is thus **restricted**  to "*seeing*" only ~ network interfaces, and software stack
         #####
         - run my-process in specific network namespace (as opposed to default host namespace)
-            **`ip netns exec`** `my-namespace` `my-process`
+            - **`ip netns exec`** `my-namespace` `my-process`
 
 #####
 - **bridges/switches** 
