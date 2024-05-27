@@ -1,5 +1,14 @@
 ## Helm
 
+- **Application** (containerized)
+    - multiple containers working together as one (logical) application
+
+ - **Package Manager** (eg Helm)
+    -  simplifies/automates the packaging/configuration of containerized _applications_ (as a single unit) within a container orchestrator like kubernetes
+
+
+
+---- 
 -  **Registry** ([artifacthub](https://artifacthub.io),  [bitnami](https://charts.bitnami.com))
     - Local Repository *Alias* [my-bitnami]() -> **Respository** ([bitnami charts](https://charts.bitnami.com/bitnami))
         - Local Chart *Alias* [my-nginx]() -> **Chart** [bitnami/nginx]()
