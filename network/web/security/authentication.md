@@ -1,7 +1,7 @@
 
 ## Authentication
 
-Prerequisites:
+Can be see seen as combination of both:
 - 1). **`Secure`** `connection` 
     - both parties know that they have `constant` partner for whole `encrypted` conversation.
  eg SSH, TSL, HTTPS with pub/priv **keys** (partner is holder of private key being used to sign incoming messages)
@@ -36,8 +36,7 @@ Prerequisites:
         - Token must previously be created independently of TLS session       
         - Advantages: token may be 
             - **short lived** and **can be revoked** at any time. 
-            - restricted in **permissions** or roles it can be used to perform - 
-             token can include authorization information (what token holder is allowed to do)
+
 
 
     - ### 3) Certificate
@@ -62,7 +61,8 @@ Prerequisites:
 
 
 _Note_: 
-- The Certs (or keys thereof) are also used for 1).
-- Its not uncommon for client (eg token) and server (eg cert) to use **different** means to authenticate themselves to the other.
+- **Asymmetric**: Its not uncommon for client (eg token) and server (eg cert) to use **different** means to authenticate themselves to the other.
+- **Cert** (or keys thereof) are also used for 1).
+- **Token** can be used not just for authentication but also **authorizaion** - contain **permissions** or roles for holder
 
 
