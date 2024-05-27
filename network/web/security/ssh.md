@@ -1,12 +1,9 @@
 ### ssh
-secure **commands** (tunnel) over a computer network.
 
+- Many applications (eg **git**, scp, rsync) use ssl (protocol and keys) **internally**
+    
 
-
-- Many applications use ssl (protocol and keys) **internally**
-    eg **git**, scp, rsync
-
-- TSL (for historic reasons) does not use ssl protocol or keys (or vice versa)
+- TSL (for historic reasons) does not use ssl protocol or keys (and vice versa)
 
 
 
