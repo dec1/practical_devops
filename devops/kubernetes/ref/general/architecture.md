@@ -4,15 +4,15 @@
 Manages containerized applications at scale
 
 ## Cluster 
+A single independent Kuberntes "installation"
 
-~ (1+ logical Apps) + Infrastructure
-         
 - **Control** plane (1 - ~3 nodes)
      #####
     - **Api Server**        
-        - exposes the Kubernetes (Rest) API 
+        - exposes the Kubernetes (Rest) API
         -  IP address configured in `controlPlaneEndpoint` of file `kubeadm-init.yaml`
-        - the only way to interact with kubernetes control plane from outside cluster
+        - all communication with cluster (except app specific - see service below) goes through api server
+            - the only way to interact with kubernetes control plane from outside cluster
 
     #####
     - **Controller Manager**
@@ -33,7 +33,7 @@ Manages containerized applications at scale
          
     #####
 
-- **Worker** nodes (1 - n nodes)
+- **Worker** nodes (1 - many)
 
      - {**Node**} 
         - **Kubelet**  
@@ -42,19 +42,22 @@ Manages containerized applications at scale
             - watches the API Server for new work assignments and maintains a reporting channel back
             - glue between Kubernetes and container runtime engine, and ensures that containers are running and considered healthy.
 
+        #####
         - **Container (runtime)** 
 
+        #####
         - **Kube-Proxy**
             - **Service** concept **implementation**
-
+                - requests to web apps running in cluster are forwarded to pods via service
+            #####
             - services exist only as a **logical** concept inside the cluster. There is no physical process that runs inside the cluster for each service that does the proxying. Under the hood, kube-proxy is responsible for managing the virtual IP addresses on the nodes and modifying all forwarding rules.
-
+            #####
             - Even for a ClusterIP service in Kubernetes, kube-proxy on **each node** sets up the necessary network rules to handle traffic to that service, regardless of whether the node currently hosts any of the pods targeted by the service.
-
+            #####
             - Load Balancing and Network Routing for the services 
 
 
-
+    #####
     - { **Replica** set }
             groups of identical pods 
             managed by **deployment**
@@ -72,6 +75,8 @@ _Note_: Typically all control nodes are identical, and all worker nodes are iden
 
 - Allow sharing of single cluster by [dividing](../general/config/namespace.md) it into multiple (logically separated) virtual clusters.
 
+#### Cluster Federation
+- Note: While there are ways to join multiple clusters, this functionality is not part of Kubernetes itself, but added on top (eg Openshift Federation)
 
 
 
