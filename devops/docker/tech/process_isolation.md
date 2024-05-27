@@ -44,6 +44,7 @@
         - Each process can be assigned a cgroup controller of given type:
             - CPU
             - Memory
+            - .....
         - Containers 
             - never share cgroups (neither docker nor kubernetes)
 
