@@ -5,7 +5,7 @@ Manages containerized applications at scale
 
 ## Cluster 
 
-~ logical App + Infrastructure
+~ (1+ logical Apps) + Infrastructure
          
 - **Control** plane (1 - ~3 nodes)
      #####
@@ -29,7 +29,7 @@ Manages containerized applications at scale
         - key-value data **persistance**.
         - used by kubernetes itself (which doesnt write to files) for persistance (cluster state, pod definitions, service configurations, secrets, etc.) 
         - not directly accessible by kubectl (admins)  or containerized applications for storing their data. 
-        - `etcd` can be used by admins to read/write directly (bypassing api server - not recommended) for troubleshooting or diaster recovery
+        - `etcdctl` can be used by admins to read/write directly (bypassing api server - not recommended) for troubleshooting or diaster recovery
          
     #####
 
