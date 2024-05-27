@@ -9,21 +9,20 @@ You can specify which (bridge, host, none....) in
 - #### Bridge  Network (default)
 
     #####
-    - Each docker **container** gets  its own *separate* container **name** and **IP address** (in fact their own **network namespace** [see also](../../../network/interafce.md))
-        - unlike in kubernetes where each shares ip address of pod
-
+    - Each docker **container** gets  its own *separate* **[network namespace](../../../network/interafce.md)** 
+   
     #####
-    - Additionally docker creates a **`Switch`**  to which it connects the host and each  containers (even though it confusingly calls this a "**bridged**" network - which is technically a 2 port switch).
-        - containers
-
+    - Additionally docker creates a **`Switch`**  to which it connects the host and each  containers 
+    (even though it confusingly calls this a network "**bridge**"  - which is technically a 2 port switch)
+  
     #####
-    - It operates at the **Layer 2**. (Data Link Layer) and forwards traffic based on MAC addresses, and allows containers to communicate with each other and with the host system, much like devices connected to a physical switch.
+    - It operates at the **Layer 2** (Data Link Layer) and forwards traffic based on MAC addresses, and allows containers to communicate with each other and with the host system, much like devices connected to a physical switch.
 
     #####
     - It also assigns ip addresses to the containers so they can communicate with each other (and with the host) over this _bridge_ (using container names or IP addresses)
 
 
-
+    ##
     ```mermaid
 
     ---
