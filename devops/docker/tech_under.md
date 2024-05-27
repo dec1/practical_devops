@@ -19,6 +19,10 @@ Cgroups and namespaces, allow you to put a process into different (independent) 
             - using too much cpu, memory, storage, network
             - corrupting memory or files of another process
             - sending another process bad data or too many requests
+        ####
+        - _Note_: while namespaces limit what processes inside ns can see of system, it
+         *doesnt stop (any) process outside any ns **looking in*** 
+            - eg process running (globally) on host can see pid (entry) of process running inside ns/container (even though actual value may differ) - but not vice versa
     
         ##
         -  Isolates 5 linux system **Aspects** (ie namespace **types**/sets),
