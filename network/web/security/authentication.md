@@ -4,7 +4,7 @@
 Can be see seen as combination of both:
 - a). **`Secure`** the `connection` 
     - so both parties know that they have `constant` partner for whole `encrypted` conversation.
- eg SSH, TSL, HTTPS with pub/priv **keys** (partner is holder of private key being used to sign incoming messages)
+ eg with pub/priv **keys** (partner is holder of private key being used to sign incoming messages)
 
 - b). `Determine` **`Who`** this constant partner is.  Can be achieved in multiple ways:
 
