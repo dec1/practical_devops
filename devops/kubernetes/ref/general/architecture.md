@@ -11,8 +11,9 @@ A single independent Kuberntes "installation"
     - **Api Server**        
         - exposes the Kubernetes (Rest) API
         -  IP address configured in `controlPlaneEndpoint` of file `kubeadm-init.yaml`
-        - all communication with cluster (except app specific - see service below) goes through api server
-            - the only way to interact with kubernetes control plane from outside cluster
+        - only via Api Server can communication take place between: 
+            - **outside** <-> **inside** cluster (except app specific - see **kube-proxy**)
+            - control <-> worker planes (**kubelet**)
 
     #####
     - **Controller Manager**
@@ -58,13 +59,13 @@ A single independent Kuberntes "installation"
 
 
     #####
-    - { **Replica** set }
-            groups of identical pods 
-            managed by **deployment**
-            (may be spread across multiple nodes)
 
-        - {**pod**}
-            - {**container**}
+    - { **Deployment** }
+        - { **Replica Set** }  - groups of identical pods (may be spread across multiple nodes)
+            - {**Pod**}
+                - {**Container**}
+            
+
 
 
 _Note_: Typically all control nodes are identical, and all worker nodes are identical
