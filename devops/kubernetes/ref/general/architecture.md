@@ -42,6 +42,7 @@ A single independent Kuberntes "installation"
             - manages the Pods and the containers running on a machine
             - watches the API Server for new work assignments and maintains a reporting channel back
             - glue between Kubernetes and container runtime engine, and ensures that containers are running and considered healthy.
+            - runs as a system service (kubelet.service) in the node's os
 
         #####
         - **Container (runtime)** 

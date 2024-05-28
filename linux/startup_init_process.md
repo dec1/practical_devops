@@ -5,8 +5,10 @@ After power on
 - initializes (essential) **hardware**, and 
 - loads the **bootloader**. The bootloader 
 - loads the os **kernel**. When the kernel is finished initializing (_kernel space_), it 
-- loads **user space** and the first process is 
-- **init** process starts with `pid = 1` (as first and process in suer space, and parent (direct/indirect of all others including any shell, and get pid >1).
+- loads **user space** and starts first process (init) 
+- **init** process starts with `pid = 1`
+    - its the first process, and parent (direct/indirect) of all others (which all get pid >1) 
+    - Note: **shell** and system **services** are also just (userspace)  processes
 
 ### init process 
 - **process** - One only speaks of processes (or programs) as running in (context of) user space.

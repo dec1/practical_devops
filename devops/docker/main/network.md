@@ -61,4 +61,4 @@ You can specify which (bridge, host, none....) in
     ```
 
 ---
-- Containers in single Kubernetes **[pod](../../kubernetes/ref/resource/pod/pod.md)**, in contrast, all **share** the **same** network namespace
+- Containers in single Kubernetes **[pod](../../kubernetes/ref/resource/pod/pod.md)**, in contrast, all **share** the **same** [network](../../kubernetes/ref/network/cni.md) namespace
