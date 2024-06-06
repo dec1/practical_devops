@@ -249,26 +249,29 @@ since the socket is the programming interface with which network applications ar
 
 ### NAT (Network Address Translation)
 
-Router changes IP address of outgoing packets of some internal (private) hosts to its own, and vice-versa for incoming packets, usually via:
+Router changes 
+- a) src IP address of outgoing packets (of some internal/private hosts) to its own, and 
+- b) vice-versa with dst address of incoming packets (that are part of same tcp connection as a) -  ie src and dst ip_address:port match. _"Conntrack"_ is used for this). 
 
 
 - ##### Port Mapping (Forwarding)
 
-    Router additionally assigns a (sender's internal) port to outgoing packets. 
-    This is used to "index" internal (private) host and perform the NAT. 
-    This implementation of NAT is called PAT (port address translation)
+- Router additionally assigns a (sender's internal) port to outgoing packets. 
+- This is used to "index" internal (private) host and perform the NAT. 
+- This implementation of NAT is called **PAT** (port address translation).
+- IP **Address _and_ Port** Mapping would be a better name since its actually mapping one pair of ip (address, port) -> another pair
 
 
 ### Circuit vs Packet Switching
 
 - Packet:
-    Internet is packet switched - Ip and Ethernet send "packets" each of which contains all address information necessary for delivery
+     - Internet is packet switched - Ip and Ethernet send "packets" each of which contains all address information necessary for delivery
     
 - Circuit: 
-    PSTN (Public Switched Telephone Network) uses circuit switching - a dedicated communication channel (of fixed bandwidth) is created 
+    - PSTN (Public Switched Telephone Network) uses circuit switching - a dedicated communication channel (of fixed bandwidth) is created 
     for a conversation during which no (further) address information need be sent.
 
-    Note: Its possible to packet switch over a circuit switched connection (effectively reserving a fixed bandwidth and unnecessarily 
+    - Note: Its possible to packet switch over a circuit switched connection (effectively reserving a fixed bandwidth and unnecessarily 
     sending address info with each packet - worst of both worlds) - this is how internet connection used to work (modem?)    
                     
 

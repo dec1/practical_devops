@@ -33,7 +33,10 @@ A single independent Kuberntes "installation"
         - `etcdctl` can be used by admins to read/write directly (bypassing api server - not recommended) for troubleshooting or diaster recovery
          
     #####
+    - *Note:* These components run in *pod* (in **kube-system** namespace) on control plane node(s)
+        - `k get pods -n kube-system` 
 
+#####
 - **Worker** nodes (1 - many)
 
      - {**Node**} 
@@ -42,7 +45,7 @@ A single independent Kuberntes "installation"
             - manages the Pods and the containers running on a machine
             - watches the API Server for new work assignments and maintains a reporting channel back
             - glue between Kubernetes and container runtime engine, and ensures that containers are running and considered healthy.
-            - runs as a system service (kubelet.service) in the node's os
+            - runs as a `linux system service` on the node
 
         #####
         - **Container (runtime)** 

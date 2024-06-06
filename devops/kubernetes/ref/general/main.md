@@ -25,11 +25,17 @@
     ```
 
 ### Api Server
-- `k` **`cluster-info`**
+- `k` **`cluster-info`** [ **`dump`** [`--output_dir=`dir_path]
     
     ```javascript
     Kubernetes control plane (Api Server) is running at https://172.30.1.2:6443
     CoreDNS is running at https://172.30.1.2:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+    ```
+
+    - **`dump`**
+        write info for debugging and diagnosing cluster problems to stdout 
+        -  `--output_dir` 
+            write to files in (existing) dir_path
 
 ### Resources
 - `k api-resources [--sort-by=name|kind]`

@@ -21,6 +21,8 @@
 
         ####
         - **`-n`**  in **namespace** *my-ns*
+            - `kube-system` components of control plane run in pods
+      
             
         #####      
         -  **`-A`** in **all** namespaces
