@@ -10,15 +10,9 @@
     - [init containers](../../resource//pod/lifecycle.md)
 
 
-- #### Non-Static
-    - **controller** - **scheduler** - **kubelet** 
-    - Non-Critical system components and user workload pods
-        - _CoreDNS, Metrics-Server_
-            - **controller** (which one depends on type of resource) watches manifests and always delegates to **scheduler** (to choose node) which delegates to **kublet** (on that node) to stop/start the pod there.
-            - some (non-critical) system compo
 
 - #### Static
-    -  **kubelet** only
+    -  are those which **kubelet** managed independetly (eg of scheduller)
     - Critical system components
         - _Api Server, Controller Manager, Scheduler, Etcd_
             - **kublet** itself watches the manifests 
