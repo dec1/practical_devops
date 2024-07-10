@@ -2,11 +2,17 @@
 
 
 - [context](context.md) info
-- editable through `k` **`config`** `...`commands
+
+###
+- editable through 
+    - `k` **`config`** `[--kubeconfig <file_path>]` `<command>`
+        - where `command`:  {`set-context`, `set`, ...} 
+
+####
 - dynamically calculated **from**     
     - in order (only first found used) contents of :
 
-        - `--kubeconfig` file path 
+        - `<file_path>`(if passed)
         - `KUBECONFIG` env var - list of file paths, with contents **merged** 
         (entry in *file later* in list, taking *precedence* if entry in multiple files)
         - **`~/.kube/config`** file 

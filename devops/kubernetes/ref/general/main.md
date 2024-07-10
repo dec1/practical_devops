@@ -17,11 +17,12 @@
 ### Version
 
 ###
-- `k version [--short]`
+- `k version`
  
     ```yaml
-    Client Version: v1.20.0
-    Server Version: v1.20.0
+    Client Version: v1.30.0
+    Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+    Server Version: v1.30.0
     ```
 
 ### Api Server
