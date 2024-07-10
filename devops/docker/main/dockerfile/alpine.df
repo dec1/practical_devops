@@ -1,3 +1,0 @@
-FROM alpine
-ENTRYPOINT ["bin/echo", "ep..."]
-CMD ["cmd1..."]

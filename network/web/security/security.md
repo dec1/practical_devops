@@ -1,40 +1,41 @@
 
 ### PKI
-set of roles, policies, hardware, software and procedures needed to create, manage, distribute, use, store and revoke digital certificates and manage public-key encryption.
+
+Set of roles, policies, hardware, software and procedures needed to create, manage, distribute, use, store and revoke digital certificates and (both private and public keys of) public-key encryption keys.
 
 
 
 - ##### SSL (now TLS)
     - authentication and encryption [uses](./tls_ssl.md)
         - **Certs** (which include public key along with other information).
-        - for each (public) cert is an associated private keys.
-        - the additional cert overhead makes TLS more complicated than SSH (which is why applications like git prefer ssh)
+            - for each (public) cert is an associated private keys.
+            - the additional cert overhead makes TLS more complicated than SSH (which is why applications like git prefer ssh)
 
         - **Client verification**
-            -  optional. Which makes TSL vulnerable to man-in-middle attacks (see below)
+            -  optional - and not using  makes TSL vulnerable to man-in-middle attacks (see below)
             - using certs for clients is uncommon (troublesome in web browser setting).
                 - Alternatives:
-                 Passed by client in http `Authorization` header of `every call` :
+                    - Passed by client in http `Authorization` header of `every call` :
 
-                    - **Bearer Tokens** (eg **JWT**, **OAuth**). 
+                        - **Bearer Tokens** (eg **JWT**, **OAuth**). 
+                            - composed of {**header**, **payload**, **signature**} 
+                            - created (and signed with key) independently of TLS session :
+                                #####
+                                ```http
+                                ...
+                                Authorization: Bearer <service-account-token>
+                                ...
+                                ```
 
-                        - from **token** created independently of TLS session :
-                            #####
-                            ```http
-                            ...
-                            Authorization: Bearer <service-account-token>
-                            ...
-                            ```
+                        - **Basic Authentication** (username and password) 
 
-                    - **Basic Authentication** (username and password) 
-
-                        - **base64** encoded `username:password` 
-                            #####
-                            ```http
-                            ...
-                            Authorization: Basic ZGVtbzpwQDU1dzByZA==
-                            ...
-                            ```
+                            - **base64** encoded `username:password` 
+                                #####
+                                ```http
+                                ...
+                                Authorization: Basic ZGVtbzpwQDU1dzByZA==
+                                ...
+                                ```
             
 - PGP
 - S/MIME

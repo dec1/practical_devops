@@ -15,9 +15,15 @@ Both **switch** and **bridge** create separate collision domains - **forward** u
 - **Subnetting** steals bits from the (class based) host portion of the address space and the bits stolen are described by changes in the subnet mask. 
 - Routers are tasked with forwarding packets based on the destination **network address**.
 
-- Class based (legacy) vs CIDR ("classless interdomain routing") subnetting: 
-  `a.b.c.d/x` where x is the **subnet mask** used to define (sub) network part of address.
-
+- **CIDR** ("classless interdomain routing") subnetting is standard: 
+  - `a.b.c.d/x` where x is the **subnet mask** used to define (sub) network part of address.
+    -  superseded (legacy) _class based_  where 4 classes essentially ~ 4 fixed subnet masks
+        ```yaml
+        Class A: /8
+        Class B: /16
+        Class C: /24
+        ``` 
+- subnets are generally managed by a single entity/organization (who may or may not delegate part there of to others to manage)
 
 ### LAN (L2)
 ####  broadcast domain = (physical) segment
@@ -247,7 +253,7 @@ since the socket is the programming interface with which network applications ar
 - Router "hiding" the private Ip addresses of hosts in its network form the outside world eg via:
 
 
-### NAT (Network Address Translation)
+#### NAT (Network Address Translation)
 
 Router changes 
 - a) src IP address of outgoing packets (of some internal/private hosts) to its own, and 

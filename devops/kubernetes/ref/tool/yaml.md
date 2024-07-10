@@ -10,9 +10,9 @@
  Note: Names of `keys` below refer to tyoe of value (not key - which in example are always scalar - even though in general this need not be).
 
 - #### Lists - Discern boundary (crucial to grokking doc structure)
-    - A line that starts with (optional whitespace and) `-` indicates a list item.
+    - A line that starts with (optional whitespace and) `-` indicates a list **item**.
     - Each subsequent line that begins with `-` at the same indentation level is considered a sibling list item.
-    - Everthing before the `-` starting the next sibling is part of teh first list item  (which may be recursive ie itself a list or map...)
+    - Everthing before the `-` starting the next sibling is part of the first list item  (which may be recursive ie itself a list or map...)
     - This sibling relationship continues until a new key-value pair (`key:`) is encountered at the **same indentation** level as the list items' **parent key**.
 
 
@@ -22,9 +22,10 @@ scalar: val
 
 # ------------------------
 # values are lists
-list: 
-- 1
-- 2
+
+list_name: 
+- 1     # list item (value)
+- 2     # list item (value)
 
 list_also: 
   - 1
@@ -38,6 +39,7 @@ list3: [
 
 # ------------------------
 # values are maps
+
 map:
   one: 1
   two: 2

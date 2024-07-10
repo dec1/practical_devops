@@ -45,7 +45,7 @@
 - **Application** (containerized)
     - multiple containers working together as one (logical) application
  - **Package Manager** simplifies/automates the packaging/configuration of containerized _applications_ (as a single unit) within a container orchestration platform
-    - **[Helm](../../kubernetes/ref/helm/helm.md)**
+    - **[Helm](../../kubernetes/ref/./tool/helm/helm.md)**
             
 
 

@@ -5,12 +5,18 @@
 
 Kubernetes registers every Service by its name with the help of its DNS service named CoreDNS. 
 
+---
+Note: _Unlike services, **individual pods** do not have FQDNs. They have names but they cant beused by oother pods. You can use pod names eg kubectl, because
+it communicates with API Server, which can look up ip address of pod in etcd. Only system components like API Server can access **etcd**. Regular pods cant, so they needs Service with FQDN from CoreDNS to reach pods the service represents._
+
+---
+
 So you can access **service** by **name** from
 1. **Pod** in
     - same namespace:
         - `my_service`
     ###    
-    - different namespace: 
+    - different namespace (FQDN): 
         - **`my_service`** **`.my_ns`** **`[.svc.cluster.local]`** 
             - the pod [usually](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#namespaces-of-services) has its 
             - `/etc/resolv.conf` configured so 

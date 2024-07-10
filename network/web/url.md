@@ -1,22 +1,43 @@
 ### Url Anatomy
 
+URLs always contain:
+
+- **Protocol (Scheme)**
+- **Host** (defined as a **FQDN**, or an **IP address**)
+- **Port** (implicit default for the protocol, if not explicitly written)
+
+DNS is used to resolve the hostname and domain name into an IP address.
+They may optionally include:
+
+- Path
+- Query String
+- Fragment
+- User Info (username and password for authentication)
+
 
 `https://` `[user[:password]@]` `www.sdom.dom.com` `[:443]` /`some/path` `[?key=val1&key2=val2]` `[#question13]`
 
 `scheme://` `authority` /`path` `[?queryString]` `[#fragment]`
 ###
 - `scheme` - https
-- `authority` - user:password@**host**:port
+- `authority` - user:password@**Host**:port
     
-    ###
-    - **`host`**   -      **`hostname`**.**`domain`**
-      - `hostname` -    `www`
-      - `domain`  - `sdom.dom.com`
+###
+- **`FQDN` (~Host)**   =      **`hostname`**.**`domainname`**
+    - `hostname` -    `www`
+    - `domainname`  - `sdom.dom.com`  
 
-        ### 
-        - `top level`    -     com
-        - `sub`      -  dom
-        - `subsub`   -  sdom
+    ####
+    - Note:
+        - DNS is used to resolve the *entire **FQDN*** (not hostname, hostname individually)
+        - confusing terminology:
+            - **domain** is sometime confusingly used for domainname eg in "_domain name resolution_" - which is incorrect.
+            -  (FQDN itself has a confusing "domain name" at end of acronym)
+
+    ### 
+    - `top level`    -     com
+    - `sub`      -  dom
+    - `subsub`   -  sdom
 
 
     ###
