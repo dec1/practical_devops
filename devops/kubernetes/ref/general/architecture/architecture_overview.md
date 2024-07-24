@@ -128,8 +128,8 @@ flowchart LR
 ```
 
 - **Dark (Khaki) Borders**:   
-    - **Groups** of Nodes: **fixed**: run only on nodes as shown
-        - cf workloads (system and user): **variable**  (as shown is usual - but may bbe allowed to vary)
+    - **Groups** of Nodes: **fixed**: run exactly on nodes as shown
+        - cf workloads (system and user): **variable**  (as shown is usual - but may be allowed to vary)
 
     - **Nodes** individual: **core** (kubernete system) components
         -  pods (ie all except Kubelet) can be queried via:  
