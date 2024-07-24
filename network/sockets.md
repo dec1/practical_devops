@@ -6,18 +6,15 @@ The OS offers to access network protocols only via the (["Berkley Bsd" or "Posix
 
 
 ### 1) Network
-- #### a)  TCP/IP Sockets
-    - Layer 4
-    - **AF_INET**
+- #### a) TCP Sockets: AF_INET  (L4)  
     - The most common and widely used, fundamental for network communication.
     - These sockets provide (indirect) access to the TCP and UDP protocols, which are used for most internet communication.
     - Common Use Cases: HTTP frameworks, web servers, and other networked applications.
     - Examples: Web servers (e.g., Apache, Nginx), network clients and servers, HTTP frameworks.
 
 ###
-- #### b) Raw Sockets
+- #### b) Raw Sockets: SOCK_RAW  (L3, L2) 
     -  Layer 2 (Ethernet Frames) and Layer 3 (IP Packets)
-    - **SOCK_RAW**
     - These sockets allow access to raw network frames at the data link layer, or raw IP packets, bypassing the TCP/IP stack.
     - Privileges: Requires elevated privileges (e.g., sudo) due to potential security risks.
     - Common Use Cases: Network diagnostic tools, custom protocol implementations.
@@ -26,8 +23,7 @@ The OS offers to access network protocols only via the (["Berkley Bsd" or "Posix
 ----
 _Aditionally the Api offers a form of IPC_
 ### 2) Local 
-- #### IPC Sockets (Inter-process Communication IPC)  
-    - **AF_UNIX**
+- #### IPC  (Inter-process Communication)  Sockets: AF_UNIX
     - These sockets provide a mechanism for communication between processes on the same machine, using Unix domain sockets.
     - Common Use Cases: Local inter-process communication, where performance and efficiency are important.
     - Comparison: While useful, they are not as commonly used as pipes for simple IPC tasks.

@@ -3,7 +3,7 @@
 
 should be more [accurately](url.md) called 
 - **`domain (and host) name`** `resolution`
-    -  it resolves host (hostname.domain) as "dotted string" to ip address 
+    -  it resolves host (hostname.[domain](domain.md)) as "dotted string" to ip address 
 
 lookup on host:
   - /etc/hosts
