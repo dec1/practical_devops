@@ -14,5 +14,5 @@
 
 The outer element has to be an array `[]` or an object `{}`.
 
-[example.json](example.json)
-[json vs yaml](../yaml/json_vs_yaml.md)
+- [example.json](example.json)
+- [json vs yaml](../yaml/json_vs_yaml.md)
