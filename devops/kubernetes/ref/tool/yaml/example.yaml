@@ -1,0 +1,34 @@
+# The top-level kind of the resource list
+kind: List
+items:
+  - kind: None
+    metadata:
+      name: 127.0.0.1
+      labels:
+        kubernetes.io/hostname: 127.0.0.1  # Label indicating the hostname
+    status:
+      capacity:
+        cpu: "4"  # CPU capacity
+      addresses:
+        - type: LegacyHostIP
+          address: 127.0.0.1  # Address of the node
+  - kind: None
+    metadata:
+      name: 127.0.0.2
+    status:
+      capacity:
+        cpu: "8"  # CPU capacity
+      addresses:
+        - type: LegacyHostIP
+          address: 127.0.0.2  # Primary address of the node
+        - type: another
+          address: 127.0.0.3  # Additional address
+
+# Users section
+users:
+  - name: myself
+    user: {}  # Empty user object
+  - name: e2e
+    user:
+      username: admin  # Username for e2e user
+      password: secret  # Password for e2e user
