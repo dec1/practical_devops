@@ -1,17 +1,4 @@
 
-unclear.
-
-@app.route('/alogin')
-def my_login():
-
-what do i pass to url_for here?
-
-
-why 2 parameters to session.get and why is url_for('index') being used at all
-
-
-
-next_url = session.get('next_url', url_for('index'))
 
 
 - `my_frontend.py`

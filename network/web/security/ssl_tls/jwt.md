@@ -4,7 +4,7 @@
  - Libraries exist in various programming languages, to create, sign, read, and validate these tokens.
 
 ##
- - Analogous to the zip standard for fie (de)compression, and the library functions for creating/reading them
+ - Analogous to the zip standard for file (de)compression, and the library functions for creating/reading them
 
  ##
 - #### Structure:
