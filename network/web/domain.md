@@ -1,11 +1,11 @@
 ### Domain
 
-A domain is a set of nodes on a network that are centrally managed by a **domain controller**. The domain controller, which often functions as a [dns server ](dns.md) for the domain, maintains information on **user accounts** and enforces policies governing roles and **access controls** for these accounts within the domain.
+A domain is a set of nodes on a network that are centrally managed by a **domain controller**. The domain controller, which often functions as a [dns server](dns.md) for the domain, maintains information on **user accounts** and enforces policies governing roles and **access controls** for these accounts within the domain.
 
 
 ####
 
-Examples of domain controller (and [Identity Provider](security/federated_identity_sso.md)):
+Examples of domain controller (and [Identity Provider](security/ssl_tls/federated_identity_sso.md)):
 
 - #### Windows
 

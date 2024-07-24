@@ -11,15 +11,14 @@ Browsers are more susceptible to security issues than regular apps, because:
  Its up to the browser itself however to keep its virtual applications as isolated as necessary  to maintain security without causing excessive **overhead**. (e.g. sandboxing, same-origin policy)
 
  ####
-- Its partly because of this that web applications are often separated into [frontend and backend](identity_provider.md)
+- Its partly because of this that web applications are often separated into [frontend and backend](keycloak/python_keycloak_2-tier/2-tier.md)
 
 ---
  **CSRF (Cross-Site Request Forgery)**  
 - "__Session (cookie) Riding__"
-    - Any request made to domain user is currently logged into (even from different page/tab) will cause submission of all cookies (and thus possible authentication)
-    - Requiring (non-cookie) CSRF **token**s for each request mitigate this
-    - Such tokens are **not** protection against (malicious) scripts on **same page** (see xss beklow), since such scripts can read all DOM and thus hijack even the (non-cookie) tokens
-    
+- Any request made to domain user is currently logged into (even from different page/tab) will cause submission of all cookies (and thus possible authentication)
+- Requiring (non-cookie) CSRF **token**s for each request mitigate this
+- Such tokens are **not** protection against (malicious) scripts on **same page** (see xss beklow), since such scripts can read all DOM and thus hijack even the (non-cookie) tokens
 ---
  **XSS (Cross-Site Scripting)**  
 
