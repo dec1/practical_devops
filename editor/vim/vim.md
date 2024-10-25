@@ -1,13 +1,18 @@
 
 #### Modes 
+Enter 
 - **Normal**
+    - `Esc` (enter from any other mode)
 - **Command**
+    - `:`  (enter from _normal_ mode)
 - **Insert**
+    - `i` :   (enter from _normal_ mode)
 
-- **Visual** Modes allow you to select text that gets visually highlighted. Then you can run (normal mode) commands on the selected text
+- **Visual** 
     - `V`             visual line  (whole lines)
     - `v`             visual 
     - `Ctrl  + v`     visual block  
+    Entering visual mode allows you to select text that gets visually highlighted. Then you can run (normal mode) edits on the selected text
 
 
 ------
