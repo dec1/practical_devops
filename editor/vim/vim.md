@@ -1,12 +1,14 @@
 
 #### Modes 
-Enter 
-- **Normal**
-    - `Esc` (enter from any other mode)
-- **Command**
-    - `:`  (enter from _normal_ mode)
-- **Insert**
-    - `i` :   (enter from _normal_ mode)
+Switch from  any other mode to:
+- **Normal** 
+    - `Esc` 
+
+Switch from from normal to mode:
+- **Command** 
+    - `:`  
+- **Insert** 
+    - `i` :   
 
 - **Visual** 
     - `V`             visual line  (whole lines)
