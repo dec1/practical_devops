@@ -1,6 +1,6 @@
 ### Storage 
 
-After the os [loads](system_boot_and_os_bootloader.md), it makes [disk](disks_and_partitions.md) space available to processes running in the os as [volumes](volumes.md)
+After the os [loads](system_firmware.md), it makes [disk](disks_and_partitions.md) space available to processes running in the os as [volumes](volumes.md)
 
 
 <figure>
@@ -32,7 +32,7 @@ After the os loads, the system firmware  is no longer in control. Modern version
     The OS can access data on [partitions](disks_and_partitions.md) of any (connected) disk independently (of system firmware) using the disk controller directly. It makes this data available to processes running in the OS as [volumes](volumes.md)
 
 ###
-_MS Windows incorrectly refers (eg in windows explorer)  to _volumes_ as [drives](./system_boot_and_os_bootloader.md)_
+_MS Windows incorrectly refers (eg in windows explorer)  to volumes as drives_
 
 
         
