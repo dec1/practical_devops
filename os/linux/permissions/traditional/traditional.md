@@ -1,7 +1,7 @@
 ### Traditional File Access (`Permission Bits`)
 
 
-When a process tries to perform an action (read, write or execute) on  a file or directory,  traditional permission checking is performed as follows:
+When a process tries to perform an action (read, write or execute) on  a file or directory,  traditional permission checking is performed as follows (see also [permission bits](permission_bits.md)):
 
 - 1). _which **triad**_ to use - ie who _who should process be interpreted as_ 
 

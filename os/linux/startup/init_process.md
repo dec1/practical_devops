@@ -5,7 +5,7 @@
 
 
 - **process** - One only speaks of processes (or programs) as running in (context of) user space.
-In kernel space and before user space starts, cpu runs instructions, but they are not considered programs/processes). 
+In kernel space and before user space starts, cpu runs instructions, but they are not considered programs/processes. 
 
 
 #####
