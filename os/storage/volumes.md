@@ -17,7 +17,7 @@
         ![image](img/volumes_lvm.png)  
 
         #####
-        Modern volumes, used as part of Logical Volume Management (LVM) and
+        Modern volumes, used as part of **Logical Volume Management (LVM)** and
 
         - Can be composed of (parts or the whole of) multiple partitions (on one or more disks). 
 
@@ -32,7 +32,7 @@
         - Logical volumes can be used with 
 
 
-    ###
+    ##
     - #### 1) Traditional Volumes
 
         ![image](img/volumes_trad.png) 
