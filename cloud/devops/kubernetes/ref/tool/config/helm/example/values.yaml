@@ -1,0 +1,9 @@
+replicaCount: 1
+image:
+  repository: nginx
+  tag: "latest"  # Default tag
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80

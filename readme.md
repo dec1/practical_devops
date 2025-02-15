@@ -15,9 +15,9 @@ It may help you too.
 
 ###
 
-- [Kubernetes](./devops/kubernetes/ref/)
+- [Kubernetes](./cloud/devops/kubernetes/ref/)
 - [Linux](./os/linux/)
-- [Docker](./devops/docker)
+- [Docker](./cloud/devops/docker)
 - [Network](./network)
 - [Vim](./editor/vim/vim.md)
 ###

@@ -1,0 +1,42 @@
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    ports:
+      - "4566:4566"
+      - "4510-4559:4510-4559"
+    environment:
+      - SERVICES=s3,dynamodb
+      - DEBUG=1
+      - PERSISTENCE=1
+    volumes:
+      - localstack_data:/tmp/localstack_data
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  dynamodb-local-ui:
+    image: aaronshaf/dynamodb-admin
+    container_name: dynamodb-admin
+    ports:
+      - "8001:8001"
+    environment:
+      - DYNAMO_ENDPOINT=http://localstack:4566
+    depends_on:
+      - localstack
+
+volumes:
+  localstack_data:
+    driver: local
+
+    # web interface - s3 - doesnt really work - use cli instead
+  # s3-ui:
+  #   image: gosuper/localstack-s3-ui
+  #   container_name: s3-ui
+  #   environment:
+  #     - S3_ENDPOINT=http://localstack:4566
+  #     - API_REQ_FILE_PATH=/data/recorded_api_calls.json
+  #   ports:
+  #     - "9000:9000"
+  #   depends_on:
+  #     - localstack
+  #   volumes:
+  #     - ./data:/data

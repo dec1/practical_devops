@@ -1,0 +1,5 @@
+apiVersion: v2
+name: nginx-chart
+description: Custom Nginx Helm Chart
+version: 0.1.0
+appVersion: "1.25.0"

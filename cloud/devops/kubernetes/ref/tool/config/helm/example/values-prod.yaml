@@ -1,0 +1,2 @@
+image:
+  tag: "stable"  # Override tag for Prod environment
