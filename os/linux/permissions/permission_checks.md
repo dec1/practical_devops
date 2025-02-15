@@ -47,7 +47,7 @@ flowchart TD
 
     subgraph Legend
         Legend_Cap["Capabilities"]:::class_cap
-        Legend_Root["Roort"]:::class_root
+        Legend_Root["Root"]:::class_root
         Legend_ACL["ACL"]:::class_acl
         Legend_Trad["Traditional <br> (Permission Bits <br> aka File Mode)"]:::class_trad
         
