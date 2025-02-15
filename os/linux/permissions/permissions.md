@@ -1,7 +1,7 @@
 
 ### Process Permissions
 
-The permissions of a **process** - always means **what action it can perform** (read, write, or execute) on  a specific  **target file** (_everything in linux is a file_: hardware devices, pipes, sockets etc) 
+The permissions of a **process** - always means **what action it can perform** (read, write, or execute) on  a specific  **target file** (_everything in linux is a file_: see also [file descriptor](../architecture/architecture.md) and [shell](../startup/shell.md)) 
 
 ![image](img/permissions.png)
 

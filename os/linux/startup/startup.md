@@ -3,7 +3,7 @@
 After power on
 - **cpu** loads instructions (via memory and registers) from (BIOS/UEFI) **firmware** , which 
 - initializes (essential) **hardware**, and 
-- loads the **bootloader**. The bootloader 
+- loads the **bootloader**. (See also [storage](../../storage/overview.md)).  The bootloader 
 
 ###
 - loads the os **kernel**. When the kernel is finished initializing (_kernel space_), it 
@@ -17,10 +17,8 @@ After power on
 ####
 - init starts a _login process_ (pid > 1, uid/gid = 0)
     - if/when user logs on the login process starts a new process:
-        - the user's **login shell** (which gets uid/gid of this user)
-            
-
-(see also [shell config](shell_config.md))
+        - the user's **login shell** (which gets uid/gid of this user)  
+        every other shell, and thus every process the user starts (in any shell),  is a (direct or indirect) subprocess of the login shell. (see also [shell config](shell_config.md))
 
 
 

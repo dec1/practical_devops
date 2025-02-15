@@ -1,7 +1,7 @@
 - #### Volumes
 
     - Volumes are how an operating system presents [disks](disks_and_partitions.md) to userspace.
-    - They are formatted with a single **file system** and cant contain special partitions (eg [esp](disks_and_partitions.md)) or sectors (eg [mbr](disks_and_partitions.md))
+    - They are formatted with a single **file system** (see also [linux file system](../linux/architecture/file_system.md)) and cant contain special partitions (eg [ESP](disks_and_partitions.md)) or sectors (eg [MBR](disks_and_partitions.md))
     
   #####
   There are two types of volumes, each of which can be used _independently_ of the  [partitioning scheme](disks_and_partitions.md) (GPT or MBR) used to partition the disks.

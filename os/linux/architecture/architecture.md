@@ -11,7 +11,7 @@ aka "system calls"
 
 - #### Shell
 
-    - The Linux shell is just a user space process like any other. Its command-line interface  provides a way for users to interact (indirectly) with the kernel api. 
+    - The Linux [shell](../startup/shell.md) is just a user space process like any other. Its command-line interface  provides a way for users to interact (indirectly) with the kernel api. 
     Any other user compiled program can do the same by making system calls (through c libraries).
 
 
