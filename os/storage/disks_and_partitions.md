@@ -52,6 +52,7 @@ The two main partitioning schemes are:
     ######
     - Only linux can boot from logical partitions
 
-x
+
+  _Note_: MS Windows incorrectly refers (eg in windows explorer)  to _volumes_ as [drives](./system_boot_and_os_bootloader.md)
 
 

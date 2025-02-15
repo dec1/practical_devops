@@ -6,6 +6,9 @@
   #####
   There are two types of volumes, each of which can be used _independently_ of the  [partitioning scheme](disks_and_partitions.md) (GPT or MBR) used to partition the disks.
 
+    ####
+  _Note_: MS Windows incorrectly refers (eg in windows explorer)  to _volumes_ as [drives](./system_boot_and_os_bootloader.md)
+
 
     ##
     - #### 2) Logical Volumes (LV)
