@@ -2,7 +2,7 @@
 **replace** existing/running **pods** of deployment - in response to change in **spec.template**   
  **revision** - new
 - cf scaling which adds more (same) pods or removes (leaving some same) - all same revision.
-- **rollout strategy** - [how/when](../../../../rollout_strategy.md) this replacement happens 
+- **rollout strategy** - [how/when](rollout_strategy.md) this replacement happens 
   
 
  A Deployment's rollout is triggered if and only if the Deployment's Pod template (that is, .spec.template) is changed, for example if the labels or container images of the template are updated. Other updates, such as scaling the Deployment, do not trigger a rollout.
