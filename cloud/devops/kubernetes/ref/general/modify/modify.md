@@ -24,7 +24,7 @@ You cant update an object (after changing immutable field)
     - `k` `replace` `-f pod.yaml`  
 
 ###
-- You muist (effectively) delete the object and recreate with the new (spec) values:
+- You must (effectively) delete the object and recreate with the new (spec) values:
 
     - `k` **`replace`** **`--force`** `-f pod.yaml`
     The --force flag works by:
